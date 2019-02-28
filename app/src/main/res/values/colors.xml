@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#2196f3</color>
+    <color name="button">#6e00bcd4</color>
+    <color name="colorPrimaryDark">#1976d2</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="buttonRosaDegradado">#6EFF4081</color>
+    <color name="negro">#212121</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="LightPrimaryColor">#bbdefb</color>
+    <color name="textSecondary">#757575</color>
+    <color name="divederColor">#BDBDBD</color>
+    <color name="azulDegradado">#6E2196F3</color>
+    <color name="rosa">#F5A9F2</color>
+    <color name="rosaMasFuerte">#FE2EF7</color>
+
+</resources>
