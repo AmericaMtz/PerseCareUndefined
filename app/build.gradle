@@ -27,8 +27,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'com.google.firebase:firebase-auth:16.0.1'
-    implementation 'com.google.firebase:firebase-core:16.0.1'
-    implementation 'com.google.firebase:firebase-database:16.0.1'
-    implementation 'com.google.firebase:firebase-storage:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.1' //PARA AUTENTIFICACIONES
+    implementation 'com.google.firebase:firebase-core:16.0.1' //PARA FIREBASE
+    implementation 'com.google.firebase:firebase-database:16.0.1' // PARA LA BASE DE DATOS
+    implementation 'com.google.firebase:firebase-storage:16.0.1' // PARA LA BASE CON IMAGENES
+    implementation 'com.android.support:cardview-v7:27.1.1' //PARA LOS CARDVIEW
+    implementation 'com.roughike:bottom-bar:2.3.1'// BOTONES CHIDOS
+    implementation 'com.android.support:recyclerview-v7:27.1.1'//RECYCLERVIEW
+    implementation 'de.hdodenhof:circleimageview:2.2.0'//IMAGENES EN CIRCULITO
+
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">Perse-Care</string>
     <string name="login">Login</string>
     <string name="password">Contraseña</string>
     <string name="email">Email</string>
@@ -11,9 +11,19 @@
     <string name="nombreusuario">Nombre de usuario:</string>
     <string name="passwordagain">Repite contraseña</string>
     <string name="sexo">Sexo:</string>
-    <string name="escribecodigo">Escribe el código de tu producto</string>
-    <string name="especificacionesdecodigo">*Es el codigo de 20 dígitos que se encuentra impreso en la parte posterior derecha de tu producto instalado en tu pecera</string>
+    <string name="escribecodigo">Escribe el código de tu producto*</string>
+    <string name="email_empty">Es necesario escribir un correo</string>
+
+    <string name="password_Empty">Es necesario escribir tu Contraseña</string>
+    <string name="especificacionesdecodigo">*Es el codigo de 10 dígitos que se encuentra impreso en la parte posterior derecha de tu producto instalado en tu pecera</string>
     <string name="empresa">Undefined-Soft</string>
     <string name="ingresascorreo">Ingresa tu correo:</string>
     <string name="especificacionesdecorreo">Se te ha enviado un correo a *********as@live.com</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>
