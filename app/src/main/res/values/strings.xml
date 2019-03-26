@@ -15,7 +15,7 @@
     <string name="email_empty">Es necesario escribir un correo</string>
 
     <string name="password_Empty">Es necesario escribir tu Contraseña</string>
-    <string name="especificacionesdecodigo">*Es el codigo de 10 dígitos que se encuentra impreso en la parte posterior derecha de tu producto instalado en tu pecera</string>
+    <string name="especificacionesdecodigo">*Es el código de 10 dígitos que se encuentra impreso en la parte posterior derecha de tu producto instalado en tu pecera</string>
     <string name="empresa">Undefined-Soft</string>
     <string name="ingresascorreo">Ingresa tu correo:</string>
     <string name="especificacionesdecorreo">Se te ha enviado un correo a *********as@live.com</string>
@@ -26,4 +26,31 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="FAQs">Preguntas Frecuentes</string>
+    <string name="hacerPregunta">Escribe tu pregunta</string>
+    <string name="respuesta">Respuesta</string>
+    <string name="FAQss">FAQs</string>
+    <string name="MensajeParaHacerCuestionario">Realiza este cuestionario y así tendremos la información necesaria para que puedas disfrutar al máximo los beneficios de nuestra aplicación</string>
+    <string name="pregunta1">¿Qué tipo de peces son?</string>
+    <string name="aguaDulce">De agua dulce.</string>
+    <string name="aguaSaladada">De agua salada</string>
+    <string name="pregunta2">Capacidad de la pecera</string>
+    <string name="lt">Litros</string>
+    <string name="adorno">¿Cuenta con adornos dentro de la pecera?</string>
+    <string name="yes">Si.</string>
+    <string name="no">No.</string>
+    <string name="porcentajeCosas">Aproximadamente ¿Qué porcentaje de la pecera  usa?</string>
+    <string name="terminar">Terminar</string>
+    <string name="cantidadDePeces">Cantidad de peces que tienes:</string>
+    <string name="Pez1">Pez 1</string>
+    <string name="Pez2">Pez 2</string>
+    <string name="Pez3">Pez 3</string>
+    <string name="Pez4">Pez 4</string>
+    <string name="Pez5">Pez 5</string>
+    <string name="Pez6">Pez 6</string>
+    <string name="Pez7">Pez 7</string>
+    <string name="Pez8">Pez 8</string>
+    <string name="Pez9">Pez 9</string>
+    <string name="Pez10">Pez 10</string>
+
 </resources>

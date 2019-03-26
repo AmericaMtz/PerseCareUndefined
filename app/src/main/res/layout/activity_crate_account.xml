@@ -34,7 +34,7 @@
 
                <ImageView
                    android:layout_width="60dp"
-                   android:layout_height="60dp"
+                   android:layout_height="45dp"
                    android:background="@drawable/logopecesito"
                    android:layout_marginStart="35dp"
                    android:layout_gravity="left"/>
@@ -139,7 +139,8 @@
                <RadioGroup
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:textAlignment="center">
+                   android:textAlignment="center"
+                   android:id="@+id/radiogroup">
 
                    <RadioButton
                        android:id="@+id/hombre"
@@ -148,12 +149,15 @@
                        android:layout_height="wrap_content"
                        android:layout_gravity="center"
                        android:text="Hombre"
-                       tools:text="Hombre" />
+                       android:onClick="onRadioButtonClicked"
+                       tools:text="Hombre"
+                       android:checked="true"/>
 
                    <RadioButton
                        android:id="@+id/mujer"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
+                       android:onClick="onRadioButtonClicked"
                        android:text="Mujer"
                        tools:text="Mujer" />
                </RadioGroup>

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,9 +24,9 @@ public class CrateAccountActivity extends AppCompatActivity {
     Button siguiente;
     private EditText nombre, email, contrasenia, repcontra,
     codigo;
-    private RadioButton hombre, mujer;
+    private RadioGroup radioGroup;
+    private RadioButton radioButton;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
-    private DatabaseReference databaseReference;
     private FirebaseAuth mAuth;
 
     @Override
@@ -53,8 +54,7 @@ public class CrateAccountActivity extends AppCompatActivity {
         contrasenia=(EditText) findViewById(R.id.password);
         repcontra=(EditText) findViewById(R.id.password2);
         codigo=(EditText) findViewById(R.id.codigo);
-        hombre=(RadioButton) findViewById(R.id.hombre);
-        mujer=(RadioButton) findViewById(R.id.mujer);
+        radioGroup=(RadioGroup) findViewById(R.id.radiogroup);
 
 
         siguiente=(Button) findViewById(R.id.siguiente);
@@ -74,11 +74,16 @@ public class CrateAccountActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
 
-                        //validamos contraseña sea mayor a 6
+
+                    //validamos contraseña sea mayor a 6
                         if (contra.length() >= 6 || repcontra.length() >= 6) {
                             //que sean iguales
                             if (contra.equals(contra2)) {
                                 if (codig.length() == 10) {
+                                    //para los radiobotones
+                                    int radioId=radioGroup.getCheckedRadioButtonId();
+                                    radioButton = findViewById(radioId);
+
                                     //creamoos el id del usuario
                                     String user_id = mAuth.getCurrentUser().getUid();
                                     //guardamos el correo en esta "dirrecion"
@@ -89,6 +94,8 @@ public class CrateAccountActivity extends AppCompatActivity {
                                     current_contrasenia_db.setValue(contra);
                                     DatabaseReference current_name_db = FirebaseDatabase.getInstance().getReference().child("Users").child(user_id).child("nombre");
                                     current_name_db.setValue(name);
+                                    DatabaseReference current_Sexo_db= FirebaseDatabase.getInstance().getReference().child("Users").child(user_id).child("sexo");
+                                    current_Sexo_db.setValue(radioButton.getText());
                                     Intent intent = new Intent(CrateAccountActivity.this, PreguntasParte1Activity.class);
                                     startActivity(intent);
                                     finish();
@@ -112,6 +119,13 @@ public class CrateAccountActivity extends AppCompatActivity {
                  });
             }
         });
+
+    }
+    public void onRadioButtonClicked(View view){
+
+        int radioId=radioGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(radioId);
+
     }
     @Override
     protected void onStart() {

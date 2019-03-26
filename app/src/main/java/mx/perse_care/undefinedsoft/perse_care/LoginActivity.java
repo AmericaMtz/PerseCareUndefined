@@ -21,10 +21,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import mx.perse_care.undefinedsoft.perse_care.Activities.FAQsActivity;
+import mx.perse_care.undefinedsoft.perse_care.Activities.FAQs1;
 import mx.perse_care.undefinedsoft.perse_care.Activities.MainActivity;
 import mx.perse_care.undefinedsoft.perse_care.Activities.OvidasteActivity;
-import mx.perse_care.undefinedsoft.perse_care.Model.FAQs;
 
 public class LoginActivity extends AppCompatActivity {
     EditText correo, contrasenia;
@@ -37,6 +36,9 @@ public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
+    private FirebaseAuth.AuthStateListener firebaseAuthListener;
+    private FirebaseAuth mAuth;
+
 
     private DatabaseReference databaseReference;
 
@@ -60,6 +62,9 @@ public class LoginActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
+
+
+
         inicializa();
         registro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +81,13 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        faqs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, PreguntasParte3.class);
+                startActivity(intent);
+            }
+        });
     }
     public void IniciaSesion(View view){
         firebaseAuth.signInWithEmailAndPassword(correo.getText().toString(), contrasenia.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -88,8 +100,7 @@ public class LoginActivity extends AppCompatActivity {
                     finish();
                 }else{
 
-                    Toast.makeText(LoginActivity.this, "Error al iniciar sesion", Toast.LENGTH_SHORT).show();
-                    mensaje.setText("Error");
+                    mensaje.setText("Error, usuario o contraseña incorrecta");
                 }
             }
         });

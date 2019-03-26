@@ -1,5 +1,6 @@
 package mx.perse_care.undefinedsoft.perse_care.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -94,9 +95,12 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.ajustes) {
 
-        }
+        } else if (id == R.id.FAQs) {
+            Intent intent= new Intent(MainActivity.this, FAQs1.class);
+            startActivity(intent);
+    }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

@@ -4,6 +4,208 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondocuestionarios"
     tools:context=".PreguntasParte2Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/apli"
+                    android:fontFamily="@font/inversions"
+                    android:textSize="35dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/colorPrimary"/>
+
+                <ImageView
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:background="@drawable/logopecesito"
+                android:layout_marginStart="35dp"
+                android:layout_gravity="left"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="60dp">
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="85dp"
+                    android:background="@drawable/porcentajeagua"
+                    android:layout_marginStart="35dp"
+                    android:layout_gravity="left"/>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/mvboli"
+                    android:text="@string/pregunta2"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/capacidad"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:textColorHighlight="@color/rosaMasFuerte"
+                    android:layout_height="wrap_content"
+                    android:ems="2"
+                    android:inputType="number"
+                    tools:layout_editor_absoluteX="84dp"
+                    tools:layout_editor_absoluteY="165dp" />
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/mvboli"
+                    android:text="@string/lt"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="85dp"
+                    android:background="@drawable/pecera"
+                    android:layout_marginStart="35dp"
+                    android:layout_gravity="left"/>
+                <TextView
+                    android:layout_width="195dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/mvboli"
+                  android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:text="@string/adorno"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                >
+                <RadioGroup
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:id="@+id/radiogroup"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/adornossi"
+                        style="@android:style/Widget.CompoundButton.RadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        tools:text="@string/yes"
+                        android:fontFamily="@font/mvboli"
+                        android:textSize="20dp"
+                        android:checked="true"
+                        android:textColor="@color/textSecondary"/>
+
+                    <RadioButton
+                        android:id="@+id/afornosno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/mvboli"
+                        tools:text="@string/no"
+                        android:textColor="@color/textSecondary"/>
+
+                </RadioGroup>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/porcentajeCosas"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/mvboli"
+                    android:textSize="15dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <EditText
+                    android:id="@+id/porcentaje"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:textColorHighlight="@color/rosaMasFuerte"
+                    android:layout_height="wrap_content"
+                    android:ems="2"
+                    android:inputType="number"
+                    tools:layout_editor_absoluteX="84dp"
+                    tools:layout_editor_absoluteY="165dp" />
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/mvboli"
+                    android:text="%"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="@string/terminar"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/lovelo"
+                android:textColor="@color/blanco"
+                android:layout_marginBottom="20dp"
+                android:textSize="17dp"
+                android:id="@+id/Terminar"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
 
 </android.support.constraint.ConstraintLayout>

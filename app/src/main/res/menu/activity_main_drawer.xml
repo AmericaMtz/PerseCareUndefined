@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        >
         <item
             android:id="@+id/termometro"
             android:icon="@drawable/termometro"
-            android:title="Temperatura" />
+            android:title="Temperatura"
+            />
         <item
             android:id="@+id/comida"
             android:icon="@drawable/comida"
@@ -27,17 +29,16 @@
         <item
             android:id="@+id/ajustes"
             android:icon="@drawable/ajustes"
-            android:title="Share" />
-        <item
-            android:id="@+id/cerrarSesion"
-            android:icon="@drawable/cerrarsesion"
-            android:title="Cerrar Sesión" />
+            android:title="Ajustes" />
         <item
             android:id="@+id/FAQs"
             android:icon="@drawable/ayudar"
             android:title="FAQs" />
+        <item
+            android:id="@+id/cerrarSesion"
+            android:icon="@drawable/cerrarsesion"
+            android:title="Cerrar Sesión" />
+
     </group>
-
-
 
 </menu>

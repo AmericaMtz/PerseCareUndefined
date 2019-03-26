@@ -7,6 +7,7 @@ public class FAQs {
         this.pregunta = pregunta;
         this.respuesta = respuesta;
     }
+    public FAQs(){}
 
     public String getPregunta() {
         return pregunta;
