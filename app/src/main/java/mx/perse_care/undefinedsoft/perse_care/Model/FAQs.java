@@ -2,12 +2,13 @@ package mx.perse_care.undefinedsoft.perse_care.Model;
 
 public class FAQs {
     private String pregunta, respuesta;
+    private int position;
 
-    public FAQs(String pregunta, String respuesta) {
+    public FAQs(String pregunta, String respuesta, int position) {
         this.pregunta = pregunta;
         this.respuesta = respuesta;
+        this.position = position;
     }
-    public FAQs(){}
 
     public String getPregunta() {
         return pregunta;
@@ -23,5 +24,16 @@ public class FAQs {
 
     public void setRespuesta(String respuesta) {
         this.respuesta = respuesta;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    public FAQs() {
     }
 }

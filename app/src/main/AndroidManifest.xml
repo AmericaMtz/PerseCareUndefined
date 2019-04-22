@@ -11,7 +11,12 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SplashScreen"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -20,7 +25,6 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -36,16 +40,20 @@
         <activity
             android:name=".Activities.OvidasteActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".Activities.FAQsActivity" />
-        <activity android:name=".Activities.FAQs" />
+
+
         <activity
             android:name=".Activities.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activities.MuestraFAQs" />
         <activity android:name=".Activities.FAQs1" />
-        <activity android:name=".PreguntasParte3"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+        <activity
+            android:name=".PreguntasParte3"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".Activities.LoginHelpDesk" />
+        <activity android:name=".HelpDesk.FAQs.ContenedorFAQs" />
+        <activity android:name=".HelpDesk.FAQs.VisualizarParaEditarFaqs"></activity>
     </application>
 
 </manifest>

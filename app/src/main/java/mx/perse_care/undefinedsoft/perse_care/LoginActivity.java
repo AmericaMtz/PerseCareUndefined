@@ -22,14 +22,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import mx.perse_care.undefinedsoft.perse_care.Activities.FAQs1;
+import mx.perse_care.undefinedsoft.perse_care.Activities.LoginHelpDesk;
 import mx.perse_care.undefinedsoft.perse_care.Activities.MainActivity;
 import mx.perse_care.undefinedsoft.perse_care.Activities.OvidasteActivity;
 
 public class LoginActivity extends AppCompatActivity {
     EditText correo, contrasenia;
     TextView click, mensaje;
-    Button registro, login;
-    ImageView faqs;
+    Button registro, login, web;
+    ImageView HelpDesk;
     TextInputLayout tilmEmail,tilmPassword;
 
 
@@ -51,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
 
         click= (TextView) findViewById(R.id.clickAqui);
         registro=(Button) findViewById(R.id.registro);
-        faqs=(ImageView) findViewById(R.id.faqs);
+        HelpDesk=(ImageView) findViewById(R.id.faqs);
         correo= (EditText)findViewById(R.id.email);
         contrasenia=(EditText)findViewById(R.id.password);
         login=(Button)findViewById(R.id.login);
@@ -81,10 +82,10 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        faqs.setOnClickListener(new View.OnClickListener() {
+        HelpDesk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, PreguntasParte3.class);
+                Intent intent = new Intent(LoginActivity.this, LoginHelpDesk.class);
                 startActivity(intent);
             }
         });
