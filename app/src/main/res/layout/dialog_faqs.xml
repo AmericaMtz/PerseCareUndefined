@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/buttonRosaDegradado"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/dialog_pregunta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="¿Pregunta?"
+            android:textColor="@color/blanco"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dialog_respuesta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Esta es la respuesta a tu pregunta"
+            android:textColor="@color/blanco"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/dialog_btn_borrar"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_red_light"
+            android:drawableLeft="@drawable/ic_borrar"
+            android:drawablePadding="20dp"
+            android:text="Borrar"
+            android:textAlignment="textStart"
+            android:textColor="@color/blanco"/>
+
+        <Button
+            android:id="@+id/dialog_btn_guardar"
+            android:padding="15dp"
+            android:drawableLeft="@drawable/ic_edit"
+            android:drawablePadding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/blanco"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Guardar"
+            android:textAlignment="textStart"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

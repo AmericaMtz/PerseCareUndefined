@@ -44,12 +44,12 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:layout_width="50dp"
-                android:id="@+id/borrarr"
+                android:id="@+id/edit"
                 android:layout_height="50dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_margin="10dp"
-                android:background="@drawable/ic_borrar" />
+                android:background="@drawable/ic_edit" />
         </RelativeLayout>
     </LinearLayout>
 

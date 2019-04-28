@@ -51,7 +51,7 @@ public class AltasFaqs extends Fragment {
            @Override
            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                if (dataSnapshot.exists()){
-                   maxim= (int) dataSnapshot.getChildrenCount();
+                   maxim= (int) dataSnapshot.getChildrenCount()+1;
                }
            }
 
@@ -70,7 +70,7 @@ public class AltasFaqs extends Fragment {
                datosPreguntas.put("pregunta", pregunt.getText().toString() );
                datosPreguntas.put("respuesta", respuesta.getText().toString());
                datosPreguntas.put("position", maxim);
-               mRootReference.child("FAQs").push().setValue(datosPreguntas);
+               mRootReference.child("FAQs").child(Integer.toString(maxim)).setValue(datosPreguntas);
                Toast.makeText(v.getContext(), "Pregunta dada de alta correctamente", Toast.LENGTH_SHORT).show();
                pregunt.setText("");
                respuesta.setText("");
