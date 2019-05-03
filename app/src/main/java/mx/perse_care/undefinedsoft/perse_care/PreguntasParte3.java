@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -28,38 +29,39 @@ import mx.perse_care.undefinedsoft.perse_care.Model.peces;
 
 public class PreguntasParte3 extends AppCompatActivity {
 
-    EditText cantidadPeces;
+    private EditText cantidadPeces;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
     private FirebaseAuth mAuth;
-    private int contador;
-    DatabaseReference bbdd;
-    Button listo, siguiente;
-    EditText p1,p2,p3,p4,p5,p6,p7,p8,p9,p10;
-
-
-    LinearLayout P1,P2,P3,P4,P5,P6,P7,P8,P9,P10;
-    String[] SPINNERLISTDulce ={"Carpas", "Killis", "Pez Ángel", "Pez Arcoiris", "Pez Betta", "Pez Disco", "Pez Espiga", "Pez Gato", "Pez Guppy", "Pez Molly"};
-    String[] SPINNERLISTSalada= {"Labrido Rayado", "Pez Cirujano", "Pez Damisela", "Pez Globo", "Pez León", "Pez Loro", "Pez Navaja", "Pez Payaso", "Pez Toro"};
+    private DatabaseReference bbdd;
+    private DatabaseReference mRef;
+    private Button listo, siguiente;
+    private EditText p1,p2,p3,p4,p5,p6,p7,p8,p9,p10;
+    private String[] pez= new String[10];
+    private String[] spinner= new String[10];
+    private String[] spinnerHint= new String[10];
+    private LinearLayout P1,P2,P3,P4,P5,P6,P7,P8,P9,P10;
+    private String[] SPINNERLISTDulce ={"Carpas","Desconocido", "Killis", "Pez Ángel", "Pez Arcoiris", "Pez Betta", "Pez Disco", "Pez Espiga", "Pez Gato", "Pez Guppy", "Pez Molly"};
+    private String[] SPINNERLISTSalada= {"Desconocido","Labrido Rayado", "Pez Cirujano", "Pez Damisela", "Pez Globo", "Pez León", "Pez Loro", "Pez Navaja", "Pez Payaso", "Pez Toro"};
      @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_preguntas_parte3);
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_preguntas_parte3);
+         cantidadPeces=(EditText) findViewById(R.id.cantidadPeces);
+         listo=(Button) findViewById(R.id.listo);
+         siguiente=(Button) findViewById(R.id.siguiente);
+         P1=(LinearLayout) findViewById(R.id.layoutPez1);
+         P2=(LinearLayout) findViewById(R.id.layoutPez2);
+         P3=(LinearLayout) findViewById(R.id.layoutPez3);
+         P4=(LinearLayout) findViewById(R.id.layoutPez4);
+         P5=(LinearLayout) findViewById(R.id.layoutPez5);
+         P6=(LinearLayout) findViewById(R.id.layoutPez6);
+         P7=(LinearLayout) findViewById(R.id.layoutPez7);
+         P8=(LinearLayout) findViewById(R.id.layoutPez8);
+         P9=(LinearLayout) findViewById(R.id.layoutPez9);
+         P10=(LinearLayout) findViewById(R.id.layoutPez10);
+         mRef= FirebaseDatabase.getInstance().getReference().child("Users");
 
-        cantidadPeces=(EditText) findViewById(R.id.cantidadPeces);
-        listo=(Button) findViewById(R.id.listo);
-        siguiente=(Button) findViewById(R.id.siguiente);
-        P1=(LinearLayout) findViewById(R.id.layoutPez1);
-        P2=(LinearLayout) findViewById(R.id.layoutPez2);
-        P3=(LinearLayout) findViewById(R.id.layoutPez3);
-        P4=(LinearLayout) findViewById(R.id.layoutPez4);
-        P5=(LinearLayout) findViewById(R.id.layoutPez5);
-        P6=(LinearLayout) findViewById(R.id.layoutPez6);
-        P7=(LinearLayout) findViewById(R.id.layoutPez7);
-        P8=(LinearLayout) findViewById(R.id.layoutPez8);
-        P9=(LinearLayout) findViewById(R.id.layoutPez9);
-        P10=(LinearLayout) findViewById(R.id.layoutPez10);
-
-        p1=(EditText) findViewById(R.id.Pez1);
+         p1=(EditText) findViewById(R.id.Pez1);
          p2=(EditText) findViewById(R.id.Pez2);
          p3=(EditText) findViewById(R.id.Pez3);
          p4=(EditText) findViewById(R.id.Pez4);
@@ -84,10 +86,8 @@ public class PreguntasParte3 extends AppCompatActivity {
                  }
              }
          };
-
          final ArrayAdapter<String> arrayAdapterDulce= new ArrayAdapter<String>(PreguntasParte3.this, android.R.layout.simple_dropdown_item_1line, SPINNERLISTDulce);
         final ArrayAdapter<String> arrayAdapterSalada=new ArrayAdapter<String>(PreguntasParte3.this, android.R.layout.simple_dropdown_item_1line, SPINNERLISTSalada);
-
         final MaterialBetterSpinner spinnerPez1=(MaterialBetterSpinner) findViewById(R.id.spinnerPez1);
         final MaterialBetterSpinner spinnerPez2=(MaterialBetterSpinner) findViewById(R.id.spinnerPez2);
         final MaterialBetterSpinner spinnerPez3=(MaterialBetterSpinner) findViewById(R.id.spinnerPez3);
@@ -98,10 +98,7 @@ public class PreguntasParte3 extends AppCompatActivity {
         final MaterialBetterSpinner spinnerPez8=(MaterialBetterSpinner) findViewById(R.id.spinnerPez8);
         final MaterialBetterSpinner spinnerPez9=(MaterialBetterSpinner) findViewById(R.id.spinnerPez9);
         final MaterialBetterSpinner spinnerPez10=(MaterialBetterSpinner) findViewById(R.id.spinnerPez10);
-
         inicio();
-
-
         listo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,11 +109,8 @@ public class PreguntasParte3 extends AppCompatActivity {
                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                        for (DataSnapshot datasnapshot : dataSnapshot.getChildren()) {
-
-                           peces Pecesito = datasnapshot.getValue(peces.class);
-                           String tipoAgua = Pecesito.getTipoAguaDePeces();
-
-
+                           peces pe = datasnapshot.getValue(peces.class);
+                           String tipoAgua = pe.getTipoAguaDePeces();
                            if(tipoAgua.equals("De agua dulce.")){
                                switch (cantidadPeces.getText().toString()){
                                    case "1":
@@ -409,15 +403,47 @@ public class PreguntasParte3 extends AppCompatActivity {
  siguiente.setOnClickListener(new View.OnClickListener() {
      @Override
      public void onClick(View v) {
-         Intent cambia= new Intent(PreguntasParte3.this, PreguntasParte2Activity.class);
-         startActivity(cambia);
-         finish();
+
+         pez[0]= p1.getText().toString();
+         pez[1]= p2.getText().toString();
+         pez[2]= p3.getText().toString();
+         pez[3]= p4.getText().toString();
+         pez[4]= p5.getText().toString();
+         pez[5]= p6.getText().toString();
+         pez[6]= p7.getText().toString();
+         pez[7]= p8.getText().toString();
+         pez[8]= p9.getText().toString();
+         pez[9]= p10.getText().toString();
+         spinner[0]= spinnerPez1.getText().toString();
+         spinner[1]= spinnerPez2.getText().toString();
+         spinner[2]= spinnerPez3.getText().toString();
+         spinner[3]= spinnerPez4.getText().toString();
+         spinner[4]= spinnerPez5.getText().toString();
+         spinner[5]= spinnerPez6.getText().toString();
+         spinner[6]= spinnerPez7.getText().toString();
+         spinner[7]= spinnerPez8.getText().toString();
+         spinner[8]= spinnerPez9.getText().toString();
+         spinner[9]= spinnerPez10.getText().toString();
+
+         final String user_id = mAuth.getCurrentUser().getUid();
+         int cant=Integer.parseInt(cantidadPeces.getText().toString());
+         for (int i=0; i<cant; i++){
+             if (spinner[i].equals("")){
+                 Toast.makeText(PreguntasParte3.this, "Porfavor selecciona la especie de tu pez", Toast.LENGTH_LONG).show();
+             }else {
+                 Map<String, Object> datosPez= new HashMap<>();
+                 datosPez.put("nombre", pez[i]);
+                 datosPez.put("especie", spinner[i]);
+                 mRef.child(user_id).child("InfoPeces").child(Integer.toString(i+1)).setValue(datosPez);
+                 Toast.makeText(PreguntasParte3.this, "datos guardados" , Toast.LENGTH_SHORT).show();
+                 Intent cambia= new Intent(PreguntasParte3.this, PreguntasParte2Activity.class);
+                 startActivity(cambia);
+                 finish();
+             }
+         }
      }
  });
-
-    }
-
-
+ }
     private void inicio() {
         P1.setVisibility(View.INVISIBLE);
         P2.setVisibility(View.GONE);

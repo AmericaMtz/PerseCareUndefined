@@ -25,12 +25,13 @@ import mx.perse_care.undefinedsoft.perse_care.Activities.FAQs1;
 import mx.perse_care.undefinedsoft.perse_care.Activities.LoginHelpDesk;
 import mx.perse_care.undefinedsoft.perse_care.Activities.MainActivity;
 import mx.perse_care.undefinedsoft.perse_care.Activities.OvidasteActivity;
+import mx.perse_care.undefinedsoft.perse_care.HelpDesk.Mantenimiento.LoginMantenimiento;
 
 public class LoginActivity extends AppCompatActivity {
     EditText correo, contrasenia;
     TextView click, mensaje;
-    Button registro, login, web;
-    ImageView HelpDesk;
+    Button registro, login;
+    ImageView HelpDesk, mantenimiento;
     TextInputLayout tilmEmail,tilmPassword;
 
 
@@ -49,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-
+        mantenimiento=(ImageView) findViewById(R.id.irLoginmantenimiento);
         click= (TextView) findViewById(R.id.clickAqui);
         registro=(Button) findViewById(R.id.registro);
         HelpDesk=(ImageView) findViewById(R.id.faqs);
@@ -70,8 +71,9 @@ public class LoginActivity extends AppCompatActivity {
         registro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, CrateAccountActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(LoginActivity.this, CrateAccountActivity.class);
+                startActivity(intent2);
+                finish();
             }
         });
 
@@ -80,6 +82,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, OvidasteActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         HelpDesk.setOnClickListener(new View.OnClickListener() {
@@ -89,25 +92,44 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-    public void IniciaSesion(View view){
-        firebaseAuth.signInWithEmailAndPassword(correo.getText().toString(), contrasenia.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mantenimiento.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    Toast.makeText(LoginActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
-                    Intent intent= new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }else{
-
-                    mensaje.setText("Error, usuario o contraseña incorrecta");
-                }
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, LoginMantenimiento.class);
+                startActivity(intent);
             }
         });
     }
+    public void IniciaSesion(View view){
+        if (correo.getText().toString().isEmpty()){
+            Toast.makeText(LoginActivity.this, "Es nesesario escribir tu correo", Toast.LENGTH_SHORT).show();
+        }else
+        if (contrasenia.getText().toString().equals("")){
+            Toast.makeText(LoginActivity.this, "Escribe tu contrasenia", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (correo.getText().toString().isEmpty() && contrasenia.getText().toString().isEmpty()){
+            Toast.makeText(LoginActivity.this, "Es nesesario llenar los campos", Toast.LENGTH_SHORT).show();
+        }else {
+            firebaseAuth.signInWithEmailAndPassword(correo.getText().toString(), contrasenia.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(LoginActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+
+                        mensaje.setText("Error, usuario o contraseña incorrecta");
+                    }
+                }
+            });
+        }
+    }
 
     private void inicializa() {
+
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {

@@ -32,13 +32,11 @@ import mx.perse_care.undefinedsoft.perse_care.R;
 
 public class MisFAQsFragment extends Fragment{
 
-    private RecyclerView myRecyclerView;
     private DatabaseReference mRef;
     private ArrayList<FAQs> faQs;
     private RecyclerView faqsRecycler;
     private RecyclerViewAdapter adapter;
 
-    ImageView imagenBote;
     public MisFAQsFragment() {
     }
 
@@ -49,18 +47,10 @@ public class MisFAQsFragment extends Fragment{
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_mis_faqs_fragment, container, false);
         mRef = FirebaseDatabase.getInstance().getReference().child("FAQs");
-
-//recyclerView
         faqsRecycler = (RecyclerView) view.findViewById(R.id.recycler);
-        //set layout as LinearLayout
-
         faQs = new ArrayList<FAQs>();
-        //send query to firebaseDatabase
-
         traePreguntas();
-
         return view;
-
     }
 
     private void traePreguntas() {
@@ -79,7 +69,6 @@ public class MisFAQsFragment extends Fragment{
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(getContext(), "Ups.... algo salio mal", Toast.LENGTH_SHORT).show();
-
             }
         });
     }
@@ -88,7 +77,6 @@ public class MisFAQsFragment extends Fragment{
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         faqsRecycler.setLayoutManager(linearLayoutManager);
-
         adapter= new RecyclerViewAdapter(faQs, getActivity());
         faqsRecycler.setAdapter(adapter);
     }

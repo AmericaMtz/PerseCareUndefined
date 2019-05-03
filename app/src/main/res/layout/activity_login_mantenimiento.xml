@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-    tools:context=".Activities.LoginHelpDesk"
-    >
+    tools:context=".HelpDesk.Mantenimiento.LoginMantenimiento">
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
@@ -22,7 +20,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Help Desk"
+                android:text="@string/Mantenimiento"
                 android:textColor="@color/textSecondary"
                 android:fontFamily="@font/multicolore"
                 android:textSize="15dp"
@@ -58,7 +56,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/ayudar" />
+                        android:background="@drawable/ic_mantenimiento" />
 
                 </RelativeLayout>
 
@@ -83,7 +81,7 @@
                         android:id="@+id/tilArea"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+
                         android:fontFamily="@font/waste"
                         >
 
@@ -123,10 +121,10 @@
                         android:layout_gravity="center">
 
                         <Button
-                            android:id="@+id/loginHelp"
+                            android:id="@+id/loginMantenimiento"
                             android:layout_width="190dp"
                             android:layout_height="50dp"
-                            android:background="@color/textSecondary"
+                            android:background="@color/negro"
                             android:fontFamily="@font/sunset"
                             android:text="@string/login"
                             android:textColor="@color/blanco"
@@ -138,4 +136,5 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

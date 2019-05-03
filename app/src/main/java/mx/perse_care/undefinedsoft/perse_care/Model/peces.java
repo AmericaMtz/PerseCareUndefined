@@ -5,14 +5,8 @@ public class peces {
     private String nombre;
     private String especie;
 
+    public peces() {
 
-    public peces(String tipoAguaDePeces, String nombre, String especie) {
-        TipoAguaDePeces = tipoAguaDePeces;
-        this.nombre = nombre;
-        this.especie = especie;
-    }
-
-    public peces(){
     }
 
     public String getTipoAguaDePeces() {

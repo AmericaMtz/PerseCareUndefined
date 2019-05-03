@@ -163,10 +163,10 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/web"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/iconlogoparaweb" />
+                    android:id="@+id/irLoginmantenimiento"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_mantenimiento" />
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"

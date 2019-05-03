@@ -12,10 +12,11 @@
         <activity
             android:name=".SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <intent-filter>
-            <action android:name="android.intent.action.VIEW" />
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".LoginActivity"
@@ -25,6 +26,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -40,8 +42,6 @@
         <activity
             android:name=".Activities.OvidasteActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
-
         <activity
             android:name=".Activities.MainActivity"
             android:label="@string/title_activity_main"
@@ -53,7 +53,10 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity android:name=".Activities.LoginHelpDesk" />
         <activity android:name=".HelpDesk.FAQs.ContenedorFAQs" />
-        <activity android:name=".HelpDesk.FAQs.VisualizarParaEditarFaqs"></activity>
+        <activity android:name=".HelpDesk.Mantenimiento.ContenedorMantenimiento"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".HelpDesk.Mantenimiento.LoginMantenimiento" />
+
     </application>
 
 </manifest>

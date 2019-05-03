@@ -4,14 +4,18 @@ public class Personas {
     private String email;
     private String nombre;
     private String sexo;
+    private String contra;
+    private String codigo;
 
-    public Personas(String email, String nombre, String sexo) {
+    public Personas() {
+    }
+
+    public Personas(String email, String nombre, String sexo, String contra, String codigo) {
         this.email = email;
         this.nombre = nombre;
         this.sexo = sexo;
-    }
-    public Personas (){
-
+        this.contra = contra;
+        this.codigo = codigo;
     }
 
     public String getEmail() {
@@ -36,5 +40,21 @@ public class Personas {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    public String getContra() {
+        return contra;
+    }
+
+    public void setContra(String contra) {
+        this.contra = contra;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 }

@@ -1,9 +1,7 @@
 package mx.perse_care.undefinedsoft.perse_care.HelpDesk.FAQs;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
@@ -14,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,7 +29,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         implements View.OnClickListener{
 
     private ArrayList<FAQs> fa;
-
     private View.OnClickListener listener;
     Dialog myDialog;
     private DatabaseReference mRef;
@@ -147,8 +143,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             item_faq=(CardView) itemView.findViewById(R.id.pictureCard);
             pre=(TextView) itemView.findViewById(R.id.textopregunta);
             res=(TextView)itemView.findViewById(R.id.textorespuesta);
-
-
         }
     }
 

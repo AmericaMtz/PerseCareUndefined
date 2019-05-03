@@ -12,16 +12,10 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 import java.util.HashMap;
 import java.util.Map;
-
 import mx.perse_care.undefinedsoft.perse_care.Model.FAQs;
 import mx.perse_care.undefinedsoft.perse_care.R;
 
@@ -29,8 +23,6 @@ public class AltasFaqs extends Fragment {
 
     private FloatingActionButton enviar;
     EditText pregunt, respuesta;
-    private DatabaseReference databaseReference;
-    DatabaseReference bbdd;
     int maxim=0;
     FAQs faQs;
 
@@ -45,27 +37,12 @@ public class AltasFaqs extends Fragment {
        pregunt=(EditText)v.findViewById(R.id.txtPregunta);
        respuesta=(EditText)v.findViewById(R.id.txtRespuesta);
        enviar=(FloatingActionButton)v.findViewById(R.id.enviarPregunta);
-        faQs= new FAQs();
-       bbdd=FirebaseDatabase.getInstance().getReference().child("FAQs");
-       bbdd.addValueEventListener(new ValueEventListener() {
-           @Override
-           public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               if (dataSnapshot.exists()){
-                   maxim= (int) dataSnapshot.getChildrenCount()+1;
-               }
-           }
-
-           @Override
-           public void onCancelled(@NonNull DatabaseError databaseError) {
-
-           }
-       });
+       faQs= new FAQs();
        final DatabaseReference mRootReference = FirebaseDatabase.getInstance().getReference();
-
        enviar.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-
+               maxim= (int) (Math.random()*200);
                Map<String,Object> datosPreguntas= new HashMap<>();
                datosPreguntas.put("pregunta", pregunt.getText().toString() );
                datosPreguntas.put("respuesta", respuesta.getText().toString());
@@ -74,10 +51,8 @@ public class AltasFaqs extends Fragment {
                Toast.makeText(v.getContext(), "Pregunta dada de alta correctamente", Toast.LENGTH_SHORT).show();
                pregunt.setText("");
                respuesta.setText("");
-
            }
        });
-
        return v;
     }
 }

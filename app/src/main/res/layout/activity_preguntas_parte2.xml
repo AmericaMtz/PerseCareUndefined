@@ -127,6 +127,7 @@
                         style="@android:style/Widget.CompoundButton.RadioButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
                         android:text="@string/yes"
                         tools:text="@string/yes"
                         android:fontFamily="@font/mvboli"
@@ -138,6 +139,7 @@
                         android:id="@+id/afornosno"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
                         android:text="@string/no"
                         android:textSize="20dp"
                         android:fontFamily="@font/mvboli"
@@ -150,6 +152,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:id="@+id/porcentajepecera"
                 android:layout_gravity="center">
                 <TextView
                     android:layout_width="wrap_content"
@@ -165,6 +168,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:id="@+id/porcentajepecera2"
                 android:layout_gravity="center">
                 <EditText
                     android:id="@+id/porcentaje"

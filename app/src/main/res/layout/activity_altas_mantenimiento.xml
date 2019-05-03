@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelpDesk.Mantenimiento.AltasMantenimiento">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="587dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/lovelo"
+                android:gravity="center"
+                android:text="@string/Mantenimiento"
+                android:textSize="35dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilArea5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/waste"
+                    android:textColorHint="@color/negro">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/altafecha"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/mvboli"
+                        android:hint="@string/fecha" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilArea2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/waste"
+                android:textColorHint="@color/negro">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/altaprogramador"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mvboli"
+                    android:hint="@string/programador" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilArea1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/waste"
+                android:textColorHint="@color/negro">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/altaproblema"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:fontFamily="@font/mvboli"
+                    android:hint="@string/problema" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/mvboli"
+                android:text="@string/tipoM"
+                android:textSize="20dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center">
+
+                <RadioGroup
+                    android:id="@+id/altatipoDeMantenimiento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center">
+
+                    <RadioButton
+                        android:id="@+id/altapreventivo"
+                        style="@android:style/Widget.CompoundButton.RadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="true"
+                        android:fontFamily="@font/mvboli"
+                        android:text="@string/preventivo"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="20dp"
+                        tools:text="@string/preventivo" />
+
+                    <RadioButton
+                        android:id="@+id/altacorrectivo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/mvboli"
+                        android:text="@string/correctivo"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="20dp"
+                        tools:text="@string/correctivo" />
+                </RadioGroup>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/altaguardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/guardar" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

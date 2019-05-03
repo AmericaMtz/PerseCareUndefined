@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/listas"
+        android:icon="@drawable/ic_listt"
+        android:title="Eventos"
+        >
+    </item>
+
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/ic_listadd"
+        android:title="Add">
+    </item>
+    <item
+        android:id="@+id/consultass"
+        android:icon="@drawable/ic_consultas"
+        android:title="Consultas">
+    </item>
+
+    <item
+        android:id="@+id/salirs"
+        android:icon="@drawable/ic_off"
+        android:title="Close">
+    </item>
+</menu>

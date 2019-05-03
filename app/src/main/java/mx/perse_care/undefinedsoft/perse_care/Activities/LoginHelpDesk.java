@@ -55,6 +55,8 @@ public class LoginHelpDesk extends AppCompatActivity {
                   //          Toast.makeText(LoginHelpDesk.this, "Usuario o contraseña incorrectos", Toast.LENGTH_LONG).show();
                     //    }
                 Intent intent = new Intent(LoginHelpDesk.this, ContenedorFAQs.class);
+                startActivity(intent);
+                finish();
                 }
 
         });

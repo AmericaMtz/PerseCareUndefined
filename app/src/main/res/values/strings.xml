@@ -53,5 +53,14 @@
     <string name="Pez9">Pez 9</string>
     <string name="Pez10">Pez 10</string>
     <string name="usuario">Nombre de usuario</string>
+    <string name="Mantenimiento">Reporte de mantenimiento</string>
+    <string name="hint_fecha">Fecha:</string>
+    <string name="programador">Programador encargado:</string>
+    <string name="problema">Descripción del problema:</string>
+    <string name="tipoM">Tipo:</string>
+    <string name="preventivo">Preventivo</string>
+    <string name="correctivo">Correctivo</string>
+    <string name="guardar">Guardar</string>
+    <string name="fecha">Fecha:</string>
 
 </resources>

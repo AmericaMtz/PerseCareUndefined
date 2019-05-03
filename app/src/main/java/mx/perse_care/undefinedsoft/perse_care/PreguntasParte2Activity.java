@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ public class PreguntasParte2Activity extends AppCompatActivity {
     private RadioButton radioButton;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
     private FirebaseAuth mAuth;
+    private LinearLayout textoPorcentaje, edittextPorcentaje;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class PreguntasParte2Activity extends AppCompatActivity {
         porcentaje=(EditText) findViewById(R.id.porcentaje);
         capacidad=(EditText) findViewById(R.id.capacidad);
         mAuth= FirebaseAuth.getInstance();
+        textoPorcentaje=(LinearLayout)findViewById(R.id.porcentajepecera);
+        edittextPorcentaje=(LinearLayout) findViewById(R.id.porcentajepecera2);
 
         firebaseAuthListener=new FirebaseAuth.AuthStateListener() {
             @Override
@@ -47,42 +51,68 @@ public class PreguntasParte2Activity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                     return;
-
                 }
             }
         };
-
 
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int radioId = radioGroup.getCheckedRadioButtonId();
                 radioButton = findViewById(radioId);
-
-                if (porcentaje.getText().toString().length()>=1) {
                     if (capacidad.getText().toString().length()>=1) {
+                      final DatabaseReference mRootReference = FirebaseDatabase.getInstance().getReference();
+                      final String user_id = mAuth.getCurrentUser().getUid();
+                      if(radioButton.getText().equals("Si.")){
+                          if (porcentaje.getText().toString().length()>=1) {
+                              Map<String, Object> datosPreguntas = new HashMap<>();
+                              datosPreguntas.put("capacidadPecera", capacidad.getText().toString() );
+                              datosPreguntas.put("porcentajePecera", porcentaje.getText().toString() );
+                              datosPreguntas.put("cuentaConAdornos", radioButton.getText());
+                              mRootReference.child("Users").child(user_id).child("InfoPecera").setValue(datosPreguntas);
+                              Toast.makeText(PreguntasParte2Activity.this, "Gracias por registrarte, ya puedes iniciar sesión", Toast.LENGTH_LONG).show();
+                              mAuth.signOut();
+                              Intent inten = new Intent(PreguntasParte2Activity.this, LoginActivity.class);
+                              startActivity(inten);
+                              finish();
+                          }else {
+                              Toast.makeText(PreguntasParte2Activity.this, "Escribe el porcentaje", Toast.LENGTH_SHORT).show();
+                          }
 
-                     //   final DatabaseReference mRootReference = FirebaseDatabase.getInstance().getReference();
-                        //final String user_id = mAuth.getCurrentUser().getUid();
-                        //Map<String, Object> datosPreguntas = new HashMap<>();
-                     //   datosPreguntas.put("capacidadPecera", capacidad.getText().toString() );
-                     //   datosPreguntas.put("porcentajePecera", porcentaje.getText().toString() );
-                     //   datosPreguntas.put("cuentaConAdornos", radioButton.getText());
-                     //   mRootReference.child("Users").child(user_id).child("InformacionPreguntas").child("pecera").setValue(datosPreguntas);
-                        Toast.makeText(PreguntasParte2Activity.this, "Gracias por registrarte", Toast.LENGTH_LONG).show();
-                        Intent inten = new Intent(PreguntasParte2Activity.this, LoginActivity.class);
-                        startActivity(inten);
-                        finish();
+                      }else
+                          if (radioButton.getText().equals("No.")){
+
+                              Map<String, Object> datosPreguntas = new HashMap<>();
+                              datosPreguntas.put("capacidadPecera", capacidad.getText().toString() );
+                              datosPreguntas.put("porcentajePecera", "0" );
+                              datosPreguntas.put("cuentaConAdornos", radioButton.getText());
+                              mRootReference.child("Users").child(user_id).child("InfoPecera").setValue(datosPreguntas);
+                              Toast.makeText(PreguntasParte2Activity.this, "Gracias por registrarte, ya puedes iniciar sesión", Toast.LENGTH_LONG).show();
+                              mAuth.signOut();
+                              Intent inten = new Intent(PreguntasParte2Activity.this, LoginActivity.class);
+                              startActivity(inten);
+                              finish();
+                          }
                     }else{
                         Toast.makeText(PreguntasParte2Activity.this, "Por favor escribe la capacidad de la pecera", Toast.LENGTH_LONG);
                         capacidad.requestFocus();
                     }
-                }else {
-                    Toast.makeText(PreguntasParte2Activity.this, "Por favor escribe el porcentaje", Toast.LENGTH_LONG);
-                    porcentaje.requestFocus();
-                }
+
             }
         });
+    }
+    public void onRadioButtonClicked(View view){
+
+        int radioId=radioGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(radioId);
+        Toast.makeText(this, "cambio "+ radioId+ "texto"+ radioButton.getText(), Toast.LENGTH_SHORT).show();
+        if (radioButton.getText().equals("No.")){
+            textoPorcentaje.setVisibility(View.GONE);
+            edittextPorcentaje.setVisibility(View.GONE);
+        }else {
+            textoPorcentaje.setVisibility(View.VISIBLE);
+            edittextPorcentaje.setVisibility(View.VISIBLE);
+        }
 
     }
 }
