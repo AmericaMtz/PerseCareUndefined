@@ -105,7 +105,6 @@ public class PreguntasParte2Activity extends AppCompatActivity {
 
         int radioId=radioGroup.getCheckedRadioButtonId();
         radioButton = findViewById(radioId);
-        Toast.makeText(this, "cambio "+ radioId+ "texto"+ radioButton.getText(), Toast.LENGTH_SHORT).show();
         if (radioButton.getText().equals("No.")){
             textoPorcentaje.setVisibility(View.GONE);
             edittextPorcentaje.setVisibility(View.GONE);
