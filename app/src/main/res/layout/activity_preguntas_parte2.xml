@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondocuestionarios"
+    android:background="@drawable/fondo15"
     tools:context=".PreguntasParte2Activity">
 
     <ScrollView
@@ -29,7 +29,7 @@
                     android:fontFamily="@font/inversions"
                     android:textSize="35dp"
                     android:layout_marginTop="20dp"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/azulClarito"/>
 
                 <ImageView
                 android:layout_width="60dp"
@@ -53,10 +53,11 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/vonique"
                     android:text="@string/pregunta2"
                     android:textAlignment="center"
                     android:textAllCaps="true"
+                    android:textColor="@color/blanco"
                     android:textSize="15dp"
                     android:textStyle="bold" />
                 <EditText
@@ -67,6 +68,8 @@
                     android:textColorHighlight="@color/rosaMasFuerte"
                     android:layout_height="wrap_content"
                     android:ems="2"
+                    android:textColor="@color/blanco"
+                    android:textColorHint="@color/blanco"
                     android:inputType="number"
                     tools:layout_editor_absoluteX="84dp"
                     tools:layout_editor_absoluteY="165dp" />
@@ -75,6 +78,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/mvboli"
+                    android:textColor="@color/blanco"
                     android:text="@string/lt"
                     android:textAlignment="center"
                     android:textAllCaps="true"
@@ -99,8 +103,9 @@
                     android:layout_width="195dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/vonique"
                   android:layout_marginLeft="10dp"
+                    android:textColor="@color/blanco"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textSize="15dp"
@@ -130,10 +135,10 @@
                         android:onClick="onRadioButtonClicked"
                         android:text="@string/yes"
                         tools:text="@string/yes"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/vonique"
                         android:textSize="20dp"
                         android:checked="true"
-                        android:textColor="@color/textSecondary"/>
+                        android:textColor="@color/blanco"/>
 
                     <RadioButton
                         android:id="@+id/afornosno"
@@ -142,9 +147,9 @@
                         android:onClick="onRadioButtonClicked"
                         android:text="@string/no"
                         android:textSize="20dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/vonique"
                         tools:text="@string/no"
-                        android:textColor="@color/textSecondary"/>
+                        android:textColor="@color/blanco"/>
 
                 </RadioGroup>
             </RelativeLayout>
@@ -160,7 +165,8 @@
                     android:text="@string/porcentajeCosas"
                     android:textAlignment="center"
                     android:textAllCaps="true"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/vonique"
+                    android:textColor="@color/blanco"
                     android:textSize="15dp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -176,6 +182,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center"
                     android:textColorHighlight="@color/rosaMasFuerte"
+                    android:textColor="@color/blanco"
                     android:layout_height="wrap_content"
                     android:ems="2"
                     android:inputType="number"
@@ -190,16 +197,17 @@
                     android:text="%"
                     android:textAlignment="center"
                     android:textAllCaps="true"
+                    android:textColor="@color/blanco"
                     android:layout_marginLeft="10dp"
                     android:textSize="12dp"
                     android:textStyle="bold" />
             </LinearLayout>
             <Button
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="50dp"
                 android:text="@string/terminar"
                 android:layout_marginTop="30dp"
-                android:background="@color/colorAccent"
+                android:background="@drawable/degradado4"
                 android:fontFamily="@font/lovelo"
                 android:textColor="@color/blanco"
                 android:layout_marginBottom="20dp"

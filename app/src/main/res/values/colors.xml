@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#2196f3</color>
-    <color name="button">#6e00bcd4</color>
-    <color name="colorPrimaryDark">#1976d2</color>
-    <color name="colorAccent">#ff4081</color>
+    <color name="colorPrimary">#9c27b0</color>
+    <color name="morado">#9c27b0</color>
+   <!-- <color name="button">#6e00bcd4</color> -->
+    <color name="colorPrimaryDark">#7b1fa2</color>
+    <color name="moradodegradado">#6a6600cc</color>
+    <color name="colorAccent">#009FFF</color>
     <color name="buttonRosaDegradado">#6EFF4081</color>
     <color name="negro">#212121</color>
+    <color name="negrotransparente">#000000</color>
     <color name="blanco">#FFFFFF</color>
-    <color name="LightPrimaryColor">#bbdefb</color>
+    <color name="LightPrimaryColor">#e1bee7</color>
     <color name="textSecondary">#757575</color>
     <color name="divederColor">#BDBDBD</color>
     <color name="azulDegradado">#6E2196F3</color>
+    <color name="azulClarito">#6dd5ed</color>
+    <color name="azulClaritoDegradado">#7b6dd5ed</color>
     <color name="rosa">#F5A9F2</color>
-    <color name="rosaMasFuerte">#FE2EF7</color>
+    <color name="rosaMasFuerte">#ff0099</color>
+    <color name="rosaMasFuerteDegradado">#76ff0099</color>
+    <color name="rojo">#8bdd1818</color>
     <color name="verde">#3ADF00</color>
-    <color name="verdeAgua">#58D68D</color>
+     <color name="verdeAgua">#58D68D</color>
     <color name="otroVerdeAgua">#48C9B0</color>
 
 </resources>

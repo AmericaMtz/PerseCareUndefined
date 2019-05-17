@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -21,11 +20,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import mx.perse_care.undefinedsoft.perse_care.Model.peces;
+import mx.perse_care.undefinedsoft.perse_care.Model.Peces;
 
 public class PreguntasParte3 extends AppCompatActivity {
 
@@ -33,15 +31,15 @@ public class PreguntasParte3 extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
     private FirebaseAuth mAuth;
     private DatabaseReference bbdd;
+    private int maxim=0;
     private DatabaseReference mRef;
     private Button listo, siguiente;
     private EditText p1,p2,p3,p4,p5,p6,p7,p8,p9,p10;
     private String[] pez= new String[10];
     private String[] spinner= new String[10];
-    private String[] spinnerHint= new String[10];
     private LinearLayout P1,P2,P3,P4,P5,P6,P7,P8,P9,P10;
-    private String[] SPINNERLISTDulce ={"Carpas","Desconocido", "Killis", "Pez Ángel", "Pez Arcoiris", "Pez Betta", "Pez Disco", "Pez Espiga", "Pez Gato", "Pez Guppy", "Pez Molly"};
-    private String[] SPINNERLISTSalada= {"Desconocido","Labrido Rayado", "Pez Cirujano", "Pez Damisela", "Pez Globo", "Pez León", "Pez Loro", "Pez Navaja", "Pez Payaso", "Pez Toro"};
+    private String[] SPINNERLISTDulce ={"Pez ángel", "Pez Betta", "Pez cebra", "Pez dorado", "Pez guppy", "Pez gurami", "Pez Koi", "Pez Limpia peceras", "Desconocido"};
+    private String[] SPINNERLISTSalada= {"Desconocido", "Pez cirujano", "Pez Damisela", "Pez Payaso", "Pez Mariposa", "Pez Abuela Loreto"};
      @Override
     protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
@@ -109,7 +107,7 @@ public class PreguntasParte3 extends AppCompatActivity {
                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                        for (DataSnapshot datasnapshot : dataSnapshot.getChildren()) {
-                           peces pe = datasnapshot.getValue(peces.class);
+                           Peces pe = datasnapshot.getValue(Peces.class);
                            String tipoAgua = pe.getTipoAguaDePeces();
                            if(tipoAgua.equals("De agua dulce.")){
                                switch (cantidadPeces.getText().toString()){
@@ -431,16 +429,19 @@ public class PreguntasParte3 extends AppCompatActivity {
              if (spinner[i].equals("")){
                  Toast.makeText(PreguntasParte3.this, "Porfavor selecciona la especie de tu pez", Toast.LENGTH_LONG).show();
              }else {
+                 maxim= (int) (Math.random()*300);
                  Map<String, Object> datosPez= new HashMap<>();
                  datosPez.put("nombre", pez[i]);
                  datosPez.put("especie", spinner[i]);
-                 mRef.child(user_id).child("InfoPeces").child(Integer.toString(i+1)).setValue(datosPez);
+                 datosPez.put("posicion", Integer.toString(maxim));
+                 mRef.child(user_id).child("InfoPeces").child(Integer.toString(maxim)).setValue(datosPez);
                  Toast.makeText(PreguntasParte3.this, "datos guardados" , Toast.LENGTH_SHORT).show();
                  Intent cambia= new Intent(PreguntasParte3.this, PreguntasParte2Activity.class);
                  startActivity(cambia);
                  finish();
              }
          }
+         mRef.child(user_id).child("CantidadDePeces").setValue(cantidadPeces.getText().toString());
      }
  });
  }

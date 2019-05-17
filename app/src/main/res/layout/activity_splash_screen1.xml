@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreen1"
-    android:background="@drawable/fondoazul"
+    android:background="@drawable/degradado1"
     >
 
     <LinearLayout
@@ -30,7 +30,7 @@
             android:fontFamily="@font/lovelo"
             android:gravity="center"
             android:text="@string/empresa"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/negro"
             android:layout_marginBottom="-225dp"
             android:textSize="35dp" />
 
@@ -41,7 +41,7 @@
             android:fontFamily="@font/inversions"
             android:gravity="center"
             android:text="@string/frase"
-            android:textColor="@color/buttonRosaDegradado"
+            android:textColor="@color/negro"
             android:textSize="22dp" />
 
     </LinearLayout>

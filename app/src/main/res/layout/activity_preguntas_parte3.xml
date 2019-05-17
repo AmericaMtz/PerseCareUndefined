@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PreguntasParte3"
-    android:background="@drawable/fondocuestionarios">
+    android:background="@drawable/fondo12">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,10 +32,11 @@
                 <TextView
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/champagne"
                     android:text="@string/cantidadDePeces"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="@color/blanco"
+                    android:textSize="25sp" />
 
                 <EditText
                     android:id="@+id/cantidadPeces"
@@ -43,6 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
+                    android:textColor="@color/blanco"
                     android:ems="2"
                     android:inputType="number"
                     android:text="0"
@@ -68,7 +70,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco"
                     android:text="@string/Pez1"
                     android:textStyle="bold" />
 
@@ -77,10 +80,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco"
                     android:layout_marginTop="12dp"
                     android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/waste">
+                    >
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/Pez1"
@@ -88,7 +92,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         android:text="@string/Pez1"
                         android:hint="Nombre Pez 1"
                         />
@@ -104,9 +109,11 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         android:layout_marginLeft="10dp"
                         android:hint="Especie"
-                        android:textColorHint="#05ab9a"
+                        android:textColorHint="@color/blanco"
                         app:met_floatingLabel="normal" />
                 </LinearLayout>
             </LinearLayout>
@@ -125,7 +132,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco"
                     android:text="@string/Pez2"
                     android:textStyle="bold" />
 
@@ -143,7 +151,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         android:text="@string/Pez2"
                         android:hint="Nombre Pez 2"
                      />
@@ -161,7 +170,12 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:hint="Especie"
-                        android:textColorHint="#05ab9a"
+                        android:textColorLink="@color/blanco"
+                        android:textColorHighlight="@color/blanco"
+                        android:shadowColor="@color/blanco"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
+                        android:textColorHint="@color/blanco"
                         app:met_floatingLabel="normal" />
                 </LinearLayout>
             </LinearLayout>
@@ -179,7 +193,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco"
                     android:text="@string/Pez3"
                     android:textStyle="bold" />
 
@@ -189,7 +204,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/waste">
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/Pez3"
@@ -197,7 +213,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         android:text="@string/Pez3"
                         android:hint="Nombre Pez 3"
                          />
@@ -234,7 +251,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco"
                     android:text="@string/Pez4"
                     android:textStyle="bold" />
 
@@ -244,7 +262,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/waste">
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/Pez4"
@@ -252,7 +271,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         android:text="@string/Pez4"
                         android:hint="Nombre Pez 4"
                          />
@@ -270,7 +290,9 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:hint="Especie"
-                        android:textColorHint="#05ab9a"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
+                        android:textColorHint="@color/blanco"
                         app:met_floatingLabel="normal" />
                 </LinearLayout>
             </LinearLayout>
@@ -289,7 +311,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco"
                     android:text="@string/Pez5"
                     android:textStyle="bold" />
 
@@ -307,7 +330,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         android:text="@string/Pez5"
                         android:hint="Nombre Pez 5"
                          />
@@ -325,7 +349,9 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:hint="Especie"
-                        android:textColorHint="#05ab9a"
+                        android:textColorHint="@color/blanco"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         app:met_floatingLabel="normal" />
                 </LinearLayout>
             </LinearLayout>
@@ -343,7 +369,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco"
                     android:text="@string/Pez6"
                     android:textStyle="bold" />
 
@@ -353,7 +380,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/waste">
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/Pez6"
@@ -361,7 +389,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         android:text="@string/Pez6"
                         android:hint="Nombre Pez 6"
                          />
@@ -379,7 +408,9 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:hint="Especie"
-                        android:textColorHint="#05ab9a"
+                        android:textColorHint="@color/blanco"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         app:met_floatingLabel="normal" />
                 </LinearLayout>
             </LinearLayout>
@@ -397,7 +428,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco"
                     android:text="@string/Pez7"
                     android:textStyle="bold" />
 
@@ -407,7 +439,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/waste">
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/Pez7"
@@ -415,7 +448,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         android:text="@string/Pez7"
                         android:hint="Nombre Pez 7"
                         />
@@ -433,7 +467,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:hint="Especie"
-                        android:textColorHint="#05ab9a"
+                        android:textColorHint="@color/blanco"
                         app:met_floatingLabel="normal" />
                 </LinearLayout>
             </LinearLayout>
@@ -452,7 +486,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco"
                     android:text="@string/Pez8"
                     android:textStyle="bold" />
 
@@ -462,7 +497,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/waste">
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/Pez8"
@@ -470,7 +506,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         android:text="@string/Pez8"
                         android:hint="Nombre Pez 8"
                         />
@@ -488,7 +525,9 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:hint="Especie"
-                        android:textColorHint="#05ab9a"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
+                        android:textColorHint="#fff"
                         app:met_floatingLabel="normal" />
                 </LinearLayout>
             </LinearLayout>
@@ -506,7 +545,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco"
                     android:text="@string/Pez9"
                     android:textStyle="bold" />
 
@@ -516,7 +556,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/waste">
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/Pez9"
@@ -524,7 +565,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         android:text="@string/Pez9"
                         android:hint="Nombre Pez 9"
                          />
@@ -542,7 +584,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:hint="Especie"
-                        android:textColorHint="#05ab9a"
+                        android:textColorHint="#fff"
                         app:met_floatingLabel="normal" />
                 </LinearLayout>
             </LinearLayout>
@@ -561,7 +603,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/mvboli"
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco"
                     android:text="@string/Pez10"
                     android:textStyle="bold" />
 
@@ -571,7 +614,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/waste">
+                    android:fontFamily="@font/champagne"
+                    android:textColor="@color/blanco">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/Pez10"
@@ -579,7 +623,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
                         android:text="@string/Pez10"
                         android:hint="Nombre Pez 10"
                          />
@@ -597,19 +642,24 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:hint="Especie"
-                        android:textColorHint="#05ab9a"
+                        android:fontFamily="@font/champagne"
+                        android:textColor="@color/blanco"
+                        android:textColorHint="#fff"
                         app:met_floatingLabel="normal" />
                 </LinearLayout>
             </LinearLayout>
 
             <Button
-                android:layout_width="120dp"
                 android:id="@+id/siguiente"
+                android:layout_width="120dp"
                 android:layout_height="50dp"
                 android:layout_gravity="right"
                 android:layout_marginTop="25dp"
-                android:background="@drawable/buttonsiguiente"
-                />
+                android:background="@drawable/degradado3"
+                android:fontFamily="@font/typew"
+                android:text="Siguiente"
+                android:textColor="@color/blanco"
+                android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

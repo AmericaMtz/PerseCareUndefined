@@ -3,6 +3,7 @@
     package="mx.perse_care.undefinedsoft.perse_care">
 
     <application
+        android:name=".Activities.App"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -53,10 +54,32 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity android:name=".Activities.LoginHelpDesk" />
         <activity android:name=".HelpDesk.FAQs.ContenedorFAQs" />
-        <activity android:name=".HelpDesk.Mantenimiento.ContenedorMantenimiento"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".HelpDesk.Mantenimiento.ContenedorMantenimiento"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".HelpDesk.Mantenimiento.LoginMantenimiento" />
+        <activity android:name=".Activities.Profile"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".Activities.EditProfile"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".Activities.AltaPez" />
+        <activity android:name=".Activities.HorariosDeComida" />
+        <activity android:name=".Activities.NotificationsCreate" />
 
+        <receiver android:name=".Activities.NotificationReceive" />
+
+        <activity android:name=".Activities.ContenededorHorarios" />
+        <activity android:name=".HelpDesk.FAQs.MisFaqsFragmentUsuario" />
+        <activity android:name=".Activities.HorariosDeComidaNotificaciones" />
+        <activity
+            android:name=".Activities.HorariosDeLimpiezaNotificaciones"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".SettingsFragment" />
+        <activity android:name=".Activities.HorariosLimpieza2" />
+        <activity android:name=".Activities.AjustesActivity" />
+        <activity android:name=".Activities.ConfiguracionNotificaciones" />
+        <activity android:name=".Activities.TodosLosPecesFragment"></activity>
     </application>
 
 </manifest>

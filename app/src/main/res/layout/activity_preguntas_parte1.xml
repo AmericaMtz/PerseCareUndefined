@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PreguntasParte1Activity"
-    android:background="@drawable/fondocuestionarios">
+    android:background="@drawable/fondo14">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,7 +28,7 @@
                     android:fontFamily="@font/inversions"
                     android:textSize="35dp"
                     android:layout_marginTop="20dp"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/rosaMasFuerte"/>
 
                 <ImageView
                     android:layout_width="60dp"
@@ -48,6 +49,7 @@
                     android:textSize="15dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="70dp"
+                    android:textColor="@color/blanco"
                     android:fontFamily="@font/multicolore"
                     android:text="@string/MensajeParaHacerCuestionario"
                     android:textAlignment="center"
@@ -62,6 +64,7 @@
                     android:text="@string/pregunta1"
                     android:textAlignment="center"
                     android:textAllCaps="true"
+                    android:textColor="@color/blanco"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -88,10 +91,10 @@
                         android:layout_gravity="center"
                         android:text="@string/aguaDulce"
                         tools:text="@string/aguaDulce"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
                         android:checked="true"
                         android:textSize="20dp"
-                        android:textColor="@color/textSecondary"/>
+                        android:textColor="@color/blanco"/>
 
                     <RadioButton
                         android:id="@+id/aguaSalada"
@@ -100,19 +103,23 @@
                         android:text="@string/aguaSaladada"
                         android:layout_marginTop="25dp"
                         android:textSize="20dp"
-                        android:fontFamily="@font/mvboli"
+                        android:fontFamily="@font/champagne"
                         tools:text="@string/aguaSaladada"
-                        android:textColor="@color/textSecondary"/>
+                        android:textColor="@color/blanco"/>
 
                 </RadioGroup>
             </RelativeLayout>
             <Button
                 android:layout_width="120dp"
                 android:id="@+id/siguiente"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:layout_gravity="right"
                 android:layout_marginTop="25dp"
-                android:background="@drawable/buttonsiguiente"
+                android:text="Siguiente"
+                android:textStyle="bold"
+                android:fontFamily="@font/typew"
+                android:textColor="@color/blanco"
+                android:background="@drawable/degradado"
                 />
         </LinearLayout>
     </ScrollView>

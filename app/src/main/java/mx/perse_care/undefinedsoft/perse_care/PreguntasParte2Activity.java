@@ -28,6 +28,7 @@ public class PreguntasParte2Activity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
     private FirebaseAuth mAuth;
     private LinearLayout textoPorcentaje, edittextPorcentaje;
+    private int maxim=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

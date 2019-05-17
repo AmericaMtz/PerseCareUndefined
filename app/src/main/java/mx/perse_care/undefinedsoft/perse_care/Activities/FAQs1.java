@@ -125,6 +125,4 @@ public class FAQs1 extends AppCompatActivity {
         pregunta.setText("");
         contador++;
     }
-
-
 }

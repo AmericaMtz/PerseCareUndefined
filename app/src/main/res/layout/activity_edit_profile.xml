@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EditProfile"
+    android:background="@drawable/degradado2"
+    android:theme="@style/Theme.AppCompat.NoActionBar">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="35dp"
+                android:background="@drawable/navfondo"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-205dp"
+                android:layout_gravity="center">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/pez30"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre: "
+                    android:textColor="@color/blanco"
+                    android:fontFamily="@font/champagne"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Editprofile_txtNombre"
+                    android:text="America "
+                    android:textColor="@color/blanco"
+                    android:fontFamily="@font/champagne"
+                    android:textSize="17sp"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sexo"
+                android:fontFamily="@font/champagne"
+                android:layout_marginLeft="85dp"
+                android:textColor="@color/blanco"
+                android:textStyle="bold"
+                android:textSize="25sp"
+
+
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:id="@+id/Editprofile_radiogroup">
+
+                    <RadioButton
+                        android:id="@+id/Editprofile_hombre"
+                        style="@android:style/Widget.CompoundButton.RadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/blanco"
+                        android:text="Hombre"
+                        android:onClick="onRadioButtonClicked"
+                        android:fontFamily="@font/gist"
+                        tools:text="Hombre"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/Editprofile_mujer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gist"
+                        android:textColor="@color/blanco"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Mujer"
+                        tools:text="Mujer" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Porcentaje de adornos usados "
+                    android:fontFamily="@font/champagne"
+                    android:textSize="22sp"
+                    android:textColor="@color/blanco"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10%"
+                    android:id="@+id/Editprofile_porcentajeAdornos"
+                    android:ems="2"
+                    android:textColor="@color/blanco"
+                    android:inputType="number"
+                    android:fontFamily="@font/champagne"
+                    android:textSize="17sp"
+
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Litros de la pecera: "
+                    android:fontFamily="@font/champagne"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blanco"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 lt"
+                    android:textColor="@color/blanco"
+                    android:id="@+id/Editprofile_txtLitrosPecera"
+                    android:fontFamily="@font/champagne"
+                    android:textSize="17sp"
+                    android:ems="2"
+                    android:inputType="number"
+                    />
+
+            </LinearLayout>
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="45dp"
+                android:layout_gravity="right"
+                android:id="@+id/Editprofile_buttonEdit"
+                android:layout_margin="35dp"
+                android:src="@drawable/com_facebook_button_like_icon_selected"
+                android:layout_height="45dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

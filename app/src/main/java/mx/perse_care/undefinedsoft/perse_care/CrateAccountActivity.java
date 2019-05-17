@@ -104,6 +104,8 @@ public class CrateAccountActivity extends AppCompatActivity {
                                                    datosPersona.put("sexo",radioButton.getText());
                                                    datosPersona.put("contra",contra);
                                                    datosPersona.put("codigo", codig);
+                                                   datosPersona.put("TiempoLibre", "Viernes");
+                                                   datosPersona.put("User", user_id);
                                                    ref.child(user_id).setValue(datosPersona);
                                                    Intent inte= new Intent(CrateAccountActivity.this, PreguntasParte1Activity.class);
                                                    Toast.makeText(CrateAccountActivity.this, "Registro exitoso", Toast.LENGTH_LONG).show();

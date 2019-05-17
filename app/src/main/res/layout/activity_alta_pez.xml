@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AltaPez"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/fondo6">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/morado"
+        android:textSize="30dp"
+        android:fontFamily="@font/waste"
+        android:layout_marginBottom="80dp"
+        android:text="Agrega a tu pez "/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/multicolore"
+            android:textColor="@color/blanco"
+            android:text="Nombre: "/>
+        <EditText
+            android:id="@+id/altaPez_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHighlight="@color/blanco"
+            android:textColorHint="@color/blanco"
+            android:hint="Nombre de tu pez"
+            android:fontFamily="@font/typew"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/blanco"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/altaPez_especie"
+            android:fontFamily="@font/mvboli"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="Especie"
+            android:textColorHighlight="@color/blanco"
+            android:textColorLink="@color/blanco"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/blanco"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_margin="40dp"
+        android:layout_gravity="right">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/altaPez_guarda"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_menu_send"
+            android:textAlignment="textStart"
+            android:textColor="@color/blanco"/>
+
+    </LinearLayout>
+</LinearLayout>

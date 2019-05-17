@@ -4,24 +4,24 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single"
+
         >
         <item
             android:id="@+id/termometro"
             android:icon="@drawable/termometro"
             android:title="Temperatura"
+            
             />
         <item
-            android:id="@+id/comida"
-            android:icon="@drawable/comida"
-            android:title="Horarios de comida" />
-        <item
-            android:id="@+id/limpieza"
-            android:icon="@drawable/spray"
-            android:title="Horarios de limpieza" />
+            android:id="@+id/horarios"
+            android:icon="@drawable/ic_horarios"
+            android:title="Horarios" />
         <item
             android:id="@+id/misPeces"
             android:icon="@drawable/pescadosolo"
+            android:checked="true"
             android:title="Mis peces" />
+
         <item
             android:id="@+id/Percebes"
             android:icon="@drawable/logo"

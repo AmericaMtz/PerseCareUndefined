@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:layout_gravity="center"
+    android:id="@+id/pictureCardTodosLosPeces"
+    android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@drawable/degradado6"
+            android:orientation="vertical">
+          <ScrollView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+                  <ImageView
+                      android:layout_width="80dp"
+                      android:layout_height="80dp"
+                      android:layout_gravity="center"
+                      android:src="@drawable/pez30"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Pez Betta"
+                      android:textSize="40sp"
+                      android:textColor="@color/blanco"
+                      android:layout_gravity="center"
+                      android:layout_marginTop="-40dp"
+                      android:fontFamily="@font/yorkwhiteletter"
+                      android:id="@+id/todoslospecesNombre"/>
+
+                  <LinearLayout
+                      android:layout_width="280dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      >
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Alimentación: "
+                          android:textStyle="bold"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="ellos comen sharala shalrala"
+                          android:id="@+id/todoslospeces_alimentacion"/>
+                  </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="280dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      >
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Colores: "
+                          android:textStyle="bold"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Tienen colores brillantes."
+                          android:id="@+id/todoslospeces_colores"/>
+                  </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="280dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      >
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Comportamiento:  "
+                          android:textStyle="bold"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Aqui va como se comportan."
+                          android:id="@+id/todoslospeces_comportamiento"/>
+                  </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="280dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      >
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Cuidados: "
+                          android:textStyle="bold"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Se cuidan..."
+                          android:id="@+id/todoslospeces_cuidados"/>
+                  </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="280dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      >
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Horarios de comida "
+                          android:textStyle="bold"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Su horario es"
+                          android:id="@+id/todoslospeces_horarios"/>
+                  </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="280dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      >
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Longevidad: "
+                          android:textStyle="bold"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="3-6 años"
+                          android:id="@+id/todoslospeces_longevidad"/>
+                  </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="280dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      >
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="PH del agua: "
+                          android:textStyle="bold"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="3.4"
+                          android:id="@+id/todoslospeces_ph"/>
+                  </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="280dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      >
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Tamaño: "
+                          android:textStyle="bold"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="7.5 cm"
+                          android:id="@+id/todoslospeces_tamaño"/>
+                  </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="280dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      >
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Temperatura: "
+                          android:textStyle="bold"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="ellos comen sharala shalrala"
+                          android:id="@+id/todoslospeces_temperatura"/>
+                  </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="280dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      >
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Tipo de agua: "
+                          android:textStyle="bold"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="ellos comen sharala shalrala"
+                          android:layout_marginBottom="20dp"
+                          android:id="@+id/todoslospeces_tipodeAgua"/>
+                  </LinearLayout>
+
+              </LinearLayout>
+          </ScrollView>
+        </LinearLayout>
+
+</android.support.v7.widget.CardView>

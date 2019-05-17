@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/comida"
+        android:icon="@drawable/comida"
+        android:title="Alimentacion">
+    </item>
+
+    <item
+        android:id="@+id/limpieza"
+        android:icon="@drawable/spray"
+        android:title="Limpieza">
+    </item>
+</menu>

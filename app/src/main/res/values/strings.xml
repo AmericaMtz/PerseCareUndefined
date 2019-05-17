@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Perse-Care</string>
-    <string name="login">Login</string>
+    <string name="login">Iniciar Sesión</string>
     <string name="password">Contraseña</string>
     <string name="email">Email</string>
     <string name="Olvidaste">¿Olvidaste la contraseña? </string>
@@ -19,7 +19,7 @@
     <string name="empresa">Undefined-Soft</string>
     <string name="ingresascorreo">Ingresa tu correo:</string>
     <string name="especificacionesdecorreo">Se te ha enviado un correo a *********as@live.com</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Perse-Care</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -31,7 +31,7 @@
     <string name="respuesta">Respuesta</string>
     <string name="FAQss">FAQs</string>
     <string name="MensajeParaHacerCuestionario">Realiza este cuestionario y así tendremos la información necesaria para que puedas disfrutar al máximo los beneficios de nuestra aplicación</string>
-    <string name="pregunta1">¿Qué tipo de peces son?</string>
+    <string name="pregunta1">¿Qué tipo de peces tienes?</string>
     <string name="aguaDulce">De agua dulce.</string>
     <string name="aguaSaladada">De agua salada</string>
     <string name="pregunta2">Capacidad de la pecera</string>

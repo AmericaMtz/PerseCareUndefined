@@ -6,16 +6,22 @@ public class Personas {
     private String sexo;
     private String contra;
     private String codigo;
+    private String CantidadDePeces;
+    private String TiempoLibre;
+    private String User;
 
     public Personas() {
     }
 
-    public Personas(String email, String nombre, String sexo, String contra, String codigo) {
+    public Personas(String email, String nombre, String sexo, String contra, String codigo, String cantidadDePeces, String tiempoLibre, String user) {
         this.email = email;
         this.nombre = nombre;
         this.sexo = sexo;
         this.contra = contra;
         this.codigo = codigo;
+        CantidadDePeces = cantidadDePeces;
+        TiempoLibre = tiempoLibre;
+        User = user;
     }
 
     public String getEmail() {
@@ -56,5 +62,29 @@ public class Personas {
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
+    }
+
+    public String getCantidadDePeces() {
+        return CantidadDePeces;
+    }
+
+    public void setCantidadDePeces(String cantidadDePeces) {
+        CantidadDePeces = cantidadDePeces;
+    }
+
+    public String getTiempoLibre() {
+        return TiempoLibre;
+    }
+
+    public void setTiempoLibre(String tiempoLibre) {
+        TiempoLibre = tiempoLibre;
+    }
+
+    public String getUser() {
+        return User;
+    }
+
+    public void setUser(String user) {
+        User = user;
     }
 }

@@ -24,14 +24,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import mx.perse_care.undefinedsoft.perse_care.Activities.FAQs1;
 import mx.perse_care.undefinedsoft.perse_care.Activities.LoginHelpDesk;
 import mx.perse_care.undefinedsoft.perse_care.Activities.MainActivity;
+import mx.perse_care.undefinedsoft.perse_care.Activities.NotificationsCreate;
 import mx.perse_care.undefinedsoft.perse_care.Activities.OvidasteActivity;
 import mx.perse_care.undefinedsoft.perse_care.HelpDesk.Mantenimiento.LoginMantenimiento;
 
 public class LoginActivity extends AppCompatActivity {
     EditText correo, contrasenia;
-    TextView click, mensaje;
+    TextView  mensaje;
     Button registro, login;
-    ImageView HelpDesk, mantenimiento;
+    ImageView HelpDesk, mantenimiento, logo;
     TextInputLayout tilmEmail,tilmPassword;
 
 
@@ -49,16 +50,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
+        logo=(ImageView) findViewById(R.id.logo);
         mantenimiento=(ImageView) findViewById(R.id.irLoginmantenimiento);
-        click= (TextView) findViewById(R.id.clickAqui);
+
         registro=(Button) findViewById(R.id.registro);
         HelpDesk=(ImageView) findViewById(R.id.faqs);
         correo= (EditText)findViewById(R.id.email);
         contrasenia=(EditText)findViewById(R.id.password);
         login=(Button)findViewById(R.id.login);
         mensaje=(TextView)findViewById(R.id.mensaje);
-
         tilmEmail = (TextInputLayout) findViewById(R.id.tilArea);
         tilmPassword = (TextInputLayout) findViewById(R.id.tilArea2);
 
@@ -66,7 +66,14 @@ public class LoginActivity extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
 
-
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(LoginActivity.this, "le puchaste", Toast.LENGTH_SHORT).show();
+                Intent intent= new Intent(LoginActivity.this, NotificationsCreate.class);
+                startActivity(intent);
+            }
+        });
         inicializa();
         registro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,14 +84,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        click.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, OvidasteActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
         HelpDesk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,13 +115,17 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
+
                         Toast.makeText(LoginActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        Bundle datos= new Bundle();
+                        datos.putString("nombre", correo.getText().toString().trim());
+                        intent.putExtras(datos);
                         startActivity(intent);
                         finish();
                     } else {
 
-                        mensaje.setText("Error, usuario o contraseña incorrecta");
+                        mensaje.setText("Usuario o contraseña incorrecta");
                     }
                 }
             });
@@ -139,7 +143,6 @@ public class LoginActivity extends AppCompatActivity {
                     Log.w("LoginActivity", "onAuthStateChanged - signed_in " + firebaseUser.getEmail());
                 }else
                     Log.w("LoginActivity", "onAuthStateChanged - signed_out");
-
             }
         };
     }
@@ -149,10 +152,5 @@ public class LoginActivity extends AppCompatActivity {
         firebaseAuth.addAuthStateListener(authStateListener);
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        firebaseAuth.removeAuthStateListener(authStateListener);
-    }
 
 }
